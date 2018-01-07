@@ -1,0 +1,9 @@
+<!-- simple template that displays a message -->
+<template name="chat_message">
+  <div class='{{messageBackgroundClass sentBy}}'>
+    <img src="{{avatar sentBy}}" style='height:50px;border-radius:6px;'>&nbsp;&nbsp;&nbsp;
+    <span style="font-size:1.2em;">{{#emoji}}{{text}}{{/emoji}}</span><br>
+    <span style="font-size:.8em;font-weight:bold;">{{timeStamp}}</span>
+    <br>
+  </div>
+</template>

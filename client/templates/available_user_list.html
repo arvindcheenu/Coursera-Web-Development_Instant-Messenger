@@ -1,0 +1,11 @@
+<!-- display a list of users -->
+<template name="available_user_list">
+  <h2 style=";" class="text-center">Chat with someone.</h2>
+  <h5 style="" class="text-center">If you don't see some user icons, please refresh the page.</h5>
+  <br>
+  <div class="row">
+    {{#each users}}
+      {{> available_user}}
+    {{/each}}
+  </div>
+</template>

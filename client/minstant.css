@@ -1,0 +1,235 @@
+/* CSS declarations go here */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes pulse {
+  50% {
+    background: #337ab7;
+  }
+}
+@keyframes pulse {
+  50% {
+    background: #337ab7;
+  }
+}
+.loading {
+  border-radius: 50%;
+  margin-top: 17%;
+  margin-left: 41%;
+  width: 200px;
+  height: 200px;
+  border: 1rem solid rgba(51, 122, 183, 0.2);
+  border-top-color: #337ab7;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+.user_avatar {
+  min-height: 110px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar_img {
+  height: 100px;
+  border-radius: 50%;
+  border: 0px solid white;
+  transition:border 0.2s ease-out;
+}
+.modal-body {
+      max-height: calc(100vh - 210px);
+      overflow-y: auto;
+  }
+
+p{
+  letter-spacing: 10px;
+  line-height: 200%;
+}
+
+.avatar_img:hover, .avatar_img:active, .avatar_img:focus {
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid white;
+
+}
+.logged-in {
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #1a1a1a;
+
+}
+
+.emoji {
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    margin-bottom: -0.25em;
+}
+.icon-bar{
+    background: #1a1a1a;
+}
+#avatar{
+  border-radius: 50%;
+}
+a:hover{
+  text-decoration: none;
+}
+
+.spinner {
+  -webkit-animation: rotator 1.4s linear infinite;
+          animation: rotator 1.4s linear infinite;
+}
+
+@-webkit-keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+@keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+          animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@-webkit-keyframes colors {
+  0% {
+    stroke: #1a1a1a;
+  }
+  100% {
+    stroke: #1a1a1a;
+  }
+}
+
+@keyframes colors {
+  0% {
+    stroke: #1a1a1a;
+  }
+  100% {
+    stroke: #1a1a1a;
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}
+.bubble {
+  font-size: 1em;
+  position: relative;
+  display: inline-block;
+  clear: both;
+  margin-bottom: 8px;
+  padding: 13px 14px;
+  vertical-align: top;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.bubble:before {
+  position: absolute;
+  top: 19px;
+  display: block;
+  width: 8px;
+  height: 6px;
+  content: '\00a0';
+  -moz-transform: rotate(29deg) skew(-35deg);
+  -ms-transform: rotate(29deg) skew(-35deg);
+  -webkit-transform: rotate(29deg) skew(-35deg);
+  transform: rotate(29deg) skew(-35deg);
+}
+.btn-round{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+}
+.bubble.you {
+  float: left;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+  -moz-animation-name: slideFromLeft;
+  -webkit-animation-name: slideFromLeft;
+  animation-name: slideFromLeft;
+}
+.bubble.you:before {
+  left: -3px;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.bubble.me {
+  float: right;
+  color: #1a1a1a;
+  background-color: #eceff1;
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+  -moz-animation-name: slideFromRight;
+  -webkit-animation-name: slideFromRight;
+  animation-name: slideFromRight;
+}
+.bubble.me:before {
+  right: -3px;
+  background-color: #eceff1;
+}
